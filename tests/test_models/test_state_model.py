@@ -145,7 +145,7 @@ class TestSave(unittest.TestCase):
         st = State()
         st.save()
         stid = "State." + st.id
-        with open("file.json", "r") as f:
+        with open("data.json", "r") as f:
             self.assertIn(stid, f.read())
 
 

@@ -141,7 +141,7 @@ class TestSave(unittest.TestCase):
         rv = Review()
         rv.save()
         rvid = "Review." + rv.id
-        with open("file.json", "r") as f:
+        with open("data.json", "r") as f:
             self.assertIn(rvid, f.read())
 
 
