@@ -43,7 +43,8 @@ class FileStorage:
     def reload(self):
         """Deserializes json objs from json file"""
         try:
-            with open(FileStorage.__file_path, mode='r', encoding='utf-8') as f:
+            with open(FileStorage.__file_path, mode='r', encoding='utf-8')\
+                    as f:
                 loaded_objs = json.load(f)
 
             for key, obj in loaded_objs.items():

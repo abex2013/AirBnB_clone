@@ -113,6 +113,7 @@ class TestSave(unittest.TestCase):
             os.rename("tmp", "file.json")
         except IOError:
             pass
+
     def test_two_saves(self):
         rv = Review()
         sleep(0.05)
@@ -136,7 +137,6 @@ class TestSave(unittest.TestCase):
         rv.save()
         self.assertLess(first_updated_at, rv.updated_at)
 
-    
     def test_save_updates_file(self):
         rv = Review()
         rv.save()

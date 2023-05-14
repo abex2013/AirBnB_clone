@@ -9,6 +9,7 @@ from datetime import datetime
 from time import sleep
 from models.state import State
 
+
 class TestState(unittest.TestCase):
     """Unittests for testing instantiation of the State class."""
 
@@ -200,7 +201,7 @@ class TestTodict(unittest.TestCase):
     def test_contrast_to_dict_dunder_dict(self):
         """
         Test to_dict method returns a dictionary
-        different from __dict__ 
+        different from __dict__
         """
         st = State()
         self.assertNotEqual(st.to_dict(), st.__dict__)
